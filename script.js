@@ -24,19 +24,18 @@ toggleBtn.addEventListener("click", () => {
 });
 
 // Navbar hide/show on scroll
+let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
-let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
-
-  if (currentScrollY > lastScrollY) {
-    // Scrolling down - hide navbar
-    navbar.classList.add("-translate-y-full");
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop && scrollTop > 100) {
+    // Scrolling down
+    navbar.style.transform = "translateY(-100%)";
   } else {
-    // Scrolling up - show navbar
-    navbar.classList.remove("-translate-y-full");
+    // Scrolling up
+    navbar.style.transform = "translateY(0)";
   }
-
-  lastScrollY = currentScrollY;
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
