@@ -30,7 +30,10 @@ const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   
-  if (scrollTop > lastScrollTop && scrollTop > 100) {
+  if (scrollTop <= 10) {
+    // At or near the top — always show
+    navbar.style.transform = "translateY(0)";
+  } else if (scrollTop > lastScrollTop) {
     // Scrolling down
     navbar.style.transform = "translateY(-100%)";
   } else {
