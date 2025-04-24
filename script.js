@@ -43,9 +43,10 @@ window.addEventListener("scroll", () => {
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
 
+// Toggle mobile menu visibility when hamburger icon is clicked
 const hamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenu = document.getElementById("mobile-menu");
 
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
