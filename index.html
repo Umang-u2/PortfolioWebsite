@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,45 +10,49 @@
   <script>
     tailwind.config = {
       darkMode: 'class',
-    }
+      theme: {
+        extend: {
+          colors: {
+            background: '#f5f5dc', // beige
+            primary: '#8b5e3c',     // brown
+            secondary: '#a26745',   // clay
+            textPrimary: '#3b3a30', // dark olive
+            textSecondary: '#5c5346', // taupe
+            border: '#d9cfc1',      // light stone
+          },
+        },
+      },
+    };
   </script>
-
-  <!-- Optional custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed dark:bg-gray-900 dark:text-gray-100">
-
+<body class="bg-background text-textPrimary font-sans leading-relaxed dark:bg-[#1c1b18] dark:text-[#e0dacd]">
   <!-- Navbar -->
   <header id="navbar" class="w-full transition-transform duration-300">
-    <nav class="max-w-7xl mx-auto p-4 flex justify-between items-center bg-white dark:bg-gray-900 shadow-md">
-      <h1 class="text-xl font-bold">Umang Kumar Upadhayay</h1>
+    <nav class="max-w-7xl mx-auto p-4 flex justify-between items-center bg-background border-b border-border shadow-md dark:bg-[#1f1e1b] dark:border-[#3b3a30]">
+      <h1 class="text-xl font-bold text-primary dark:text-[#e8d6c0]">Umang Kumar Upadhayay</h1>
       <ul class="flex gap-6 text-sm">
-        <li><a href="#about" class="hover:text-blue-500">About</a></li>
-        <li><a href="#experience" class="hover:text-blue-500">Work Experience</a></li>
-        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+        <li><a href="#about" class="hover:text-secondary dark:hover:text-[#f3c98b]">About</a></li>
+        <li><a href="#experience" class="hover:text-secondary dark:hover:text-[#f3c98b]">Work Experience</a></li>
+        <li><a href="#projects" class="hover:text-secondary dark:hover:text-[#f3c98b]">Projects</a></li>
+        <li><a href="#contact" class="hover:text-secondary dark:hover:text-[#f3c98b]">Contact</a></li>
       </ul>
       <button id="theme-toggle">🌙 Dark Mode</button>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white dark:from-gray-800 dark:to-gray-900">
-    <img src="me.jpg" alt="Profile picture" class="w-32 h-32 mx-auto rounded-full border-4 border-white mb-6 shadow-lg">
+  <section class="text-center py-20 bg-gradient-to-r from-background to-border text-textPrimary dark:from-[#1c1b18] dark:to-[#2a2925] dark:text-[#e0dacd]">
+    <img src="me.jpg" alt="Profile picture" class="w-32 h-32 mx-auto rounded-full border-4 border-primary mb-6 shadow-lg dark:border-[#d1bfa9]">
     <h2 class="text-4xl font-bold mb-4">Hi, I'm Umang</h2>
-    <p class="text-lg mb-6">Software Developer | Backend Specialist | Tech Explorer</p>
-    <a href="#experience" class="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100">
-      View My Work
-    </a>
-    <a href="resume.pdf" download
-   class="inline-block mt-4 ml-4 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 dark:bg-gray-100 dark:text-blue-800 dark:hover:bg-gray-300">
-  📄 Download Resume
-</a>
+    <p class="text-lg mb-6 text-textSecondary dark:text-[#b5a690]">Software Developer | Backend Specialist | Tech Explorer</p>
+    <a href="#experience" class="bg-secondary text-background px-6 py-2 rounded-full font-semibold hover:opacity-90 dark:bg-[#d6a679] dark:text-[#1c1b18]">View My Work</a>
+    <a href="resume.pdf" download class="inline-block mt-4 ml-4 bg-border text-textPrimary px-6 py-2 rounded-full font-semibold hover:bg-secondary hover:text-background dark:bg-[#2a2925] dark:text-[#e0dacd] dark:hover:bg-[#d6a679] dark:hover:text-[#1c1b18]">📄 Download Resume</a>
   </section>
-  
+
   <section id="about" class="max-w-4xl mx-auto py-12 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4 text-black dark:text-white">About Me</h2>
-    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-lg text-textSecondary leading-relaxed dark:text-[#b5a690]">
       I'm a backend engineer passionate about building scalable and resilient systems. With hands-on experience in
       <span class="font-semibold text-blue-700 dark:text-blue-400">Java</span>,
       <span class="font-semibold text-blue-700 dark:text-blue-400">Spring Boot</span>,
@@ -57,7 +61,7 @@
       I specialize in designing robust APIs and integrating enterprise-level backend systems. Currently working at
       <span class="font-semibold text-blue-700 dark:text-blue-400">Adidas</span>, I thrive on solving complex backend challenges, optimizing performance, and contributing to high-impact digital experiences.
     </p>
-    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+    <p class="text-lg text-textSecondary leading-relaxed mt-4 dark:text-[#b5a690]">
       I enjoy clean code, RESTful design, and system architecture. Outside of code, I’m often exploring new tech, reading sci-fi, or diving into history and space documentaries.
     </p>
       <div class="flex flex-wrap gap-2 mt-4">
@@ -80,10 +84,8 @@
   
 
   <section id="experience" class="max-w-5xl mx-auto py-12 px-6">
-    <h2 class="text-3xl font-bold mb-8 text-black dark:text-white">Work Experience</h2>
-  
-    <!-- Experience 1 -->
-    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 mb-6 flex items-start gap-4">
+    <h2 class="text-3xl font-bold mb-8">Work Experience</h2>
+    <div class="bg-border shadow rounded-lg p-6 mb-6 text-textSecondary dark:bg-[#2a2925] dark:text-[#b5a690]">
       <img src="adidas-logo.png" alt="Adidas Logo" class="w-12 h-12 object-contain mt-1">
       <div>
         <h3 class="text-xl font-semibold text-blue-700 dark:text-blue-400">Adidas</h3>
@@ -102,7 +104,7 @@
           <li>Implemented automated build and deployment processes for applications
             with CI and CD tools(Jenkins).</li>
           <li>Deployed applications on server machines utilizing cloud services like
-            AWS or Azure. (K8 and Docker)
+            AWS. (K8 and Docker)
           </li>
           <li>
             Built RESTful web services using Spring Boot frameworks for developing
@@ -117,7 +119,7 @@
     </div>
   
     <!-- Experience 2 -->
-    <div class="bg-white dark:bg-gray-800 shadow rounded-lg p-6 flex items-start gap-4">
+    <div class="bg-border shadow rounded-lg p-6 text-textSecondary dark:bg-[#2a2925] dark:text-[#b5a690]">
       <img src="Accenture-Logo.png" alt="Accenture Logo" class="w-12 h-12 object-contain mt-1">
       <div>
         <h3 class="text-xl font-semibold text-blue-700 dark:text-blue-400">Accenture</h3>
@@ -146,22 +148,21 @@
   
 
   <!-- Projects -->
-  <section id="projects" class="bg-gray-200 py-12">
+  <section id="projects" class="bg-background py-12 dark:bg-[#1c1b18]">
     <div class="max-w-5xl mx-auto px-8">
-      <h2 class="text-3xl font-bold mb-8 text-black">Projects</h2>
+      <h2 class="text-3xl font-bold mb-8">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- Project Card -->
-        <div class="dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">e-Commerce Application</h3>
-          <p class="mb-4">An Ecommerce application developed with Spring Boot to take the user through the retail journey</p>
-          <a href="https://github.com/Umang-u2/Ecommerce" class="text-blue-500 hover:underline">View Project →</a>
+        <div class="bg-border p-6 rounded-xl shadow hover:shadow-lg dark:bg-[#2a2925]">
+          <h3 class="text-xl font-semibold mb-2 text-primary dark:text-[#e8d6c0]">e-Commerce Application</h3>
+          <p class="mb-4 text-textSecondary dark:text-[#b5a690]">An Ecommerce application developed with Spring Boot to take the user through the retail journey</p>
+          <a href="https://github.com/Umang-u2/Ecommerce" class="text-secondary hover:underline dark:text-[#f3c98b]">View Project →</a>
         </div>
 
         <!-- Another Project -->
-        <div class="dark:bg-gray-800 p-6 rounded-xl shadow hover:shadow-lg">
-          <h3 class="text-xl font-semibold mb-2">Social Media</h3>
-          <p class="mb-4">A Social media App to register and login Users to the website and create, delete and update posts using Node.JS, Express.JS and MongoDb</p>
-          <a href="https://github.com/Umang-u2/Social-media" class="text-blue-500 hover:underline">View Project →</a>
+        <div class="bg-border p-6 rounded-xl shadow hover:shadow-lg dark:bg-[#2a2925]">
+          <h3 class="text-xl font-semibold mb-2 text-primary dark:text-[#e8d6c0]">Social Media</h3>
+          <p class="mb-4 text-textSecondary dark:text-[#b5a690]">A Social media App to register and login Users to the website and create, delete and update posts using Node.JS, Express.JS and MongoDb</p>
+          <a href="https://github.com/Umang-u2/Social-media" class="text-secondary hover:underline dark:text-[#f3c98b]">View Project →</a>
         </div>
       </div>
     </div>
@@ -170,17 +171,16 @@
   <!-- Contact -->
   <section id="contact" class="max-w-4xl mx-auto py-12 px-8">
     <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-    <p class="mb-6">I'd love to connect! Reach out via email or social media.</p>
-    <ul class="space-y-2">
-      <li>Email: <a href="mailto:umang.1js14cs107@gmail.com" class="text-blue-600 hover:underline">umang.1js14cs107@gmail.com</a></li>
-      <li>GitHub: <a href="https://github.com/Umang-u2" target="_blank" class="text-blue-600 hover:underline">@umang-u2</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/umang-kumar-upadhayay-39121b96/" target="_blank" class="text-blue-600 hover:underline">/umang-kumar-upadhayay-39121b96</a></li>
+    <p class="mb-6 text-textSecondary dark:text-[#b5a690]">I'd love to connect!</p>
+    <ul class="space-y-2 text-textSecondary dark:text-[#b5a690]">
+      <li>Email: <a href="mailto:umang.1js14cs107@gmail.com" class="text-secondary hover:underline dark:text-[#f3c98b]">umang.1js14cs107@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/Umang-u2" target="_blank" class="text-secondary hover:underline dark:text-[#f3c98b]">@umang-u2</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/umang-kumar-upadhayay-39121b96/" target="_blank" class="text-secondary hover:underline dark:text-[#f3c98b]">/umang-kumar-upadhayay-39121b96</a></li>
     </ul>
   </section>
 
-  <!-- Footer -->
-  <footer class="dark:bg-gray-800 text-center p-4 shadow mt-12">
-    <p>© 2025 Your Name. All rights reserved.</p>
+  <footer class="bg-border text-center p-4 shadow mt-12 dark:bg-[#2a2925] dark:text-[#b5a690]">
+    <p class="text-textSecondary dark:text-[#b5a690]">© 2025 Umang Kumar Upadhayay. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
