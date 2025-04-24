@@ -12,6 +12,10 @@
       darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: {
+      heading: ['Raleway', 'sans-serif'],
+      body: ['Open Sans', 'sans-serif'],
+    },
           colors: {
             background: '#f5f5dc', // beige
             primary: '#8b5e3c',     // brown
@@ -25,12 +29,13 @@
     };
   </script>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-background text-textPrimary font-sans leading-relaxed dark:bg-[#1c1b18] dark:text-[#e0dacd]">
+<body class="bg-background text-textPrimary font-body leading-relaxed dark:bg-[#1c1b18] dark:text-[#e0dacd]">
   <!-- Navbar -->
   <header id="navbar" class="w-full sticky top-0 z-50">
     <nav class="max-w-7xl mx-auto p-4 flex justify-between items-center bg-background border-b border-border shadow-md dark:bg-[#1f1e1b] dark:border-[#3b3a30]">
-      <h1 class="text-xl font-bold text-primary dark:text-[#e8d6c0]">Umang Kumar Upadhayay</h1>
+      <h1 class="text-xl font-heading text-primary dark:text-[#e8d6c0]">Umang Kumar Upadhayay</h1>
       <!-- Navbar links for desktop/tablets (hidden on mobile) -->
     <ul class="hidden md:flex gap-6 text-sm">
       <li><a href="#about" class="hover:text-secondary dark:hover:text-[#f3c98b]">About</a></li>
@@ -64,14 +69,14 @@
   <!-- Hero -->
   <section class="text-center py-20 bg-gradient-to-r from-background to-border text-textPrimary dark:from-[#1c1b18] dark:to-[#2a2925] dark:text-[#e0dacd]">
     <img src="assets/Me.jpg" alt="Profile picture" class="w-32 h-32 mx-auto rounded-full border-4 border-primary mb-6 shadow-lg dark:border-[#d1bfa9]">
-    <h2 class="text-4xl font-bold mb-4">Hi, I'm Umang</h2>
+    <h2 class="text-4xl font-heading mb-4">Hi, I'm Umang</h2>
     <p class="text-lg mb-6 text-textSecondary dark:text-[#b5a690]">Software Developer | Backend Specialist | Tech Explorer</p>
     <a href="#experience" class="bg-secondary text-background px-6 py-2 rounded-full font-semibold hover:opacity-90 dark:bg-[#d6a679] dark:text-[#1c1b18]">View My Work</a>
     <a href="assets/Umang_Resume.pdf" download class="inline-block mt-4 ml-4 bg-border text-textPrimary px-6 py-2 rounded-full font-semibold hover:bg-secondary hover:text-background dark:bg-[#2a2925] dark:text-[#e0dacd] dark:hover:bg-[#d6a679] dark:hover:text-[#1c1b18]">📄 Download Resume</a>
   </section>
 
   <section id="about" class="max-w-4xl mx-auto py-12 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <h2 class="text-3xl font-heading mb-4">About Me</h2>
     <p class="text-lg text-textSecondary leading-relaxed dark:text-[#b5a690]">
       I'm a backend engineer passionate about building scalable and resilient systems. With hands-on experience in
       <span class="font-semibold text-blue-700 dark:text-blue-400">Java</span>,
@@ -104,11 +109,11 @@
   
 
   <section id="experience" class="max-w-5xl mx-auto py-12 px-6">
-    <h2 class="text-3xl font-bold mb-8">Work Experience</h2>
+    <h2 class="text-3xl font-heading mb-8">Work Experience</h2>
     <div class="bg-border shadow rounded-lg p-6 mb-6 text-textSecondary dark:bg-[#2a2925] dark:text-[#b5a690]">
       <img src="adidas-logo.png" alt="Adidas Logo" class="w-12 h-12 object-contain mt-1">
       <div>
-        <h3 class="text-xl font-semibold text-blue-700 dark:text-blue-400">Adidas</h3>
+        <h3 class="text-xl font-heading text-primary dark:text-[#e8d6c0]">Adidas</h3>
         <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Software Developer – Gurgaon, India | 2021 – Present</p>
         <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
           <li>Worked on the Delivery Options module to provide various delivery
@@ -142,7 +147,7 @@
     <div class="bg-border shadow rounded-lg p-6 text-textSecondary dark:bg-[#2a2925] dark:text-[#b5a690]">
       <img src="Accenture-Logo.png" alt="Accenture Logo" class="w-12 h-12 object-contain mt-1">
       <div>
-        <h3 class="text-xl font-semibold text-blue-700 dark:text-blue-400">Accenture</h3>
+        <h3 class="text-xl font-heading text-primary dark:text-[#e8d6c0]">Accenture</h3>
         <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">Application Development Associate – Bangalore | 2018 – 2021</p>
         <ul class="list-disc list-inside text-gray-700 dark:text-gray-300">
           <li>Worked for a telecommunication client, to develop and maintain their retail application
@@ -170,17 +175,17 @@
   <!-- Projects -->
   <section id="projects" class="bg-background py-12 dark:bg-[#1c1b18]">
     <div class="max-w-5xl mx-auto px-8">
-      <h2 class="text-3xl font-bold mb-8">Projects</h2>
+      <h2 class="text-3xl font-heading mb-8">Projects</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="bg-border p-6 rounded-xl shadow hover:shadow-lg dark:bg-[#2a2925]">
-          <h3 class="text-xl font-semibold mb-2 text-primary dark:text-[#e8d6c0]">e-Commerce Application</h3>
+          <h3 class="text-xl font-heading mb-2 text-primary dark:text-[#e8d6c0]">e-Commerce Application</h3>
           <p class="mb-4 text-textSecondary dark:text-[#b5a690]">An Ecommerce application developed with Spring Boot to take the user through the retail journey</p>
           <a href="https://github.com/Umang-u2/Ecommerce" class="text-secondary hover:underline dark:text-[#f3c98b]">View Project →</a>
         </div>
 
         <!-- Another Project -->
         <div class="bg-border p-6 rounded-xl shadow hover:shadow-lg dark:bg-[#2a2925]">
-          <h3 class="text-xl font-semibold mb-2 text-primary dark:text-[#e8d6c0]">Social Media</h3>
+          <h3 class="text-xl font-heading mb-2 text-primary dark:text-[#e8d6c0]">Social Media</h3>
           <p class="mb-4 text-textSecondary dark:text-[#b5a690]">A Social media App to register and login Users to the website and create, delete and update posts using Node.JS, Express.JS and MongoDb</p>
           <a href="https://github.com/Umang-u2/Social-media" class="text-secondary hover:underline dark:text-[#f3c98b]">View Project →</a>
         </div>
@@ -190,7 +195,7 @@
 
   <!-- Contact -->
   <section id="contact" class="max-w-4xl mx-auto py-12 px-8">
-    <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+    <h2 class="text-3xl font-heading mb-4">Contact Me</h2>
     <p class="mb-6 text-textSecondary dark:text-[#b5a690]">I'd love to connect!</p>
     <ul class="space-y-2 text-textSecondary dark:text-[#b5a690]">
       <li>Email: <a href="mailto:umang.1js14cs107@gmail.com" class="text-secondary hover:underline dark:text-[#f3c98b]">umang.1js14cs107@gmail.com</a></li>
