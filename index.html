@@ -37,8 +37,24 @@
         <li><a href="#projects" class="hover:text-secondary dark:hover:text-[#f3c98b]">Projects</a></li>
         <li><a href="#contact" class="hover:text-secondary dark:hover:text-[#f3c98b]">Contact</a></li>
       </ul>
-      <button id="theme-toggle">🌙 Dark Mode</button>
-    </nav>
+      <!-- Mobile Hamburger Menu -->
+    <button id="hamburger" class="md:hidden text-primary dark:text-[#e8d6c0]" aria-label="Toggle Navigation">
+      <span class="block w-6 h-0.5 bg-primary dark:bg-[#e8d6c0] mb-1"></span>
+      <span class="block w-6 h-0.5 bg-primary dark:bg-[#e8d6c0] mb-1"></span>
+      <span class="block w-6 h-0.5 bg-primary dark:bg-[#e8d6c0]"></span>
+    </button>
+    <button id="theme-toggle" class="md:hidden">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- Mobile Menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-background dark:bg-[#1f1e1b] absolute top-16 left-0 right-0 p-6 text-center border-t border-border dark:border-[#3b3a30]">
+    <ul>
+      <li><a href="#about" class="block py-2 text-lg text-textPrimary dark:text-[#e8d6c0]">About</a></li>
+      <li><a href="#experience" class="block py-2 text-lg text-textPrimary dark:text-[#e8d6c0]">Work Experience</a></li>
+      <li><a href="#projects" class="block py-2 text-lg text-textPrimary dark:text-[#e8d6c0]">Projects</a></li>
+      <li><a href="#contact" class="block py-2 text-lg text-textPrimary dark:text-[#e8d6c0]">Contact</a></li>
+    </ul>
+  </div>
   </header>
 
   <!-- Hero -->
